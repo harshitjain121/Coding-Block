@@ -2,7 +2,7 @@ package binarySearch;
 
 public class BinarySearchAlgo {
 
-    public static void main(String ... args){
+    public static void main(String[] args){
         int ar[] = {1,2,3,4,5,6,7,8,9,10};
         BinarySearchAlgo search = new BinarySearchAlgo();
         int ans = search.binarySearch(ar , 10 , 3);

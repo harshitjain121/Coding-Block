@@ -1,12 +1,13 @@
 package binarySearch;
 
-public class FirstAndLastOccurrence {
+public class TotalOccurrencesOfElement {
+    //here we r refering FirstAndLastOccurrence class
+
     public static void main(String[] args){
-        int ar[] = {1,2,3,3,3,4,5};
+        int ar[] = {1,2,3,3,3,3,4,5};
         int key = 3;
-        FirstAndLastOccurrence search = new FirstAndLastOccurrence();
-        System.out.println("First Occurrence of "+ key +" : "+ search.firstOccurrence(ar, ar.length, key));
-        System.out.println("Last Occurrence of "+ key +" : " + search.lastOccurrence(ar, ar.length, key));
+        TotalOccurrencesOfElement count = new TotalOccurrencesOfElement();
+        System.out.println(count.totalElement(ar, ar.length, key));
     }
 
     private int firstOccurrence(int[] arr, int size, int key){
@@ -52,4 +53,9 @@ public class FirstAndLastOccurrence {
         }
         return ans;
     }
+
+    private int totalElement(int[] arr, int size, int key){
+        return (lastOccurrence(arr, size, key)-firstOccurrence(arr, size, key) + 1);
+    }
+
 }
